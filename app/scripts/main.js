@@ -64,24 +64,26 @@ $('body').on('click', function() {
 });
 
 // Follower
-var mouseX = 0,
-    mouseY = 0;
+// var mouseX = 0,
+//     mouseY = 0;
 
-$(document).mousemove(function(e){
-   mouseX = e.pageX;
-   mouseY = e.pageY; 
-});
+// $(document).mousemove(function(e){
+//    mouseX = e.pageX;
+//    mouseY = e.pageY; 
+// });
 
-var follower = $("#follower");
-var xp = 40, yp = 40;
-var loop = setInterval(function(){
-    // change 12 to alter damping higher is slower
-    xp += (mouseX - xp) / 12 -1;
-    yp += (mouseY - yp) / 12 -1;
-    follower.css({left:xp, top:yp});
+// var follower = $("#follower");
+// var xp = 40, yp = 40;
+// var loop = setInterval(function(){
+//     // change 12 to alter damping higher is slower
+//     xp += (mouseX - xp) / 12 -1;
+//     yp += (mouseY - yp) / 12 -1;
+//     follower.css({left:xp, top:yp});
 
-}, 15); 
+// }, 15); 
 
+
+// Mouse move event (with delay)
 // var timer = null;
 // var isIntervalSet = false;
 
