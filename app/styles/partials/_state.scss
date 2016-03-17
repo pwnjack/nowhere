@@ -1,0 +1,18 @@
+/* =======================
+   State
+   ======================= */
+
+// Dynamically added classes for states, used by scripts
+
+.is-hidden {
+	display: none !important;
+}
+
+.is-blacked {
+	background: black !important;
+	.huge-text {color: white !important;}
+}
+
+.is-active {
+	display: block !important;
+}
