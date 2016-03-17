@@ -23,7 +23,7 @@ var Roller= {
 
 
                         }, 125);
-        }, 250); // Time between rolling elements (min 250ms)
+        }, 500); // Time between rolling elements (min 250ms)
     },
     Stop: function() {
         window.clearTimeout(this.roller);
