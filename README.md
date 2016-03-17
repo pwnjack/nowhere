@@ -1,4 +1,4 @@
-To run in local clone the repo and run:
+To install local dependencies run:
 
 	npm install
 	bower install
