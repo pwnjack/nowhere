@@ -1,4 +1,16 @@
+// FitText
+// fitText(document.getElementById('fittext'), 1.2)
+window.fitText( document.getElementsByClassName("fittext") );
 
+// Hide quotes
+$('.quotes').css('display', 'none');
+
+// Add custom cursor
+
+// Set stop cursor
+$('body').removeClass('cursor-play').addClass('cursor-stop');
+
+// Text roller
 var Roller= {
     roller: null,
     Start: function(i) {
@@ -33,40 +45,78 @@ var Roller= {
 Roller.Start(1); // Start the roller
 // Roller.Stop(); // Stop the roller
 
-var timer = null;
-var isIntervalSet = false;
+$('body').on('click', function() {
+    
+    // Lights off
+    $(this).toggleClass('is-blacked');
+    // Set play cursor
+    $('body').removeClass('cursor-stop').addClass('cursor-play');
+    // Stop roller
+    Roller.Stop();
 
-$('body').mousemove(function() {
-    if (isIntervalSet) {
-        return;
+    if (!$('body').hasClass('is-blacked')) {
+        // Start roller
+        Roller.Start(1);
+        // Set stop cursor
+        $('body').removeClass('cursor-play').addClass('cursor-stop');
     }
-    timer = window.setInterval(function() {
-
-        $('body').addClass('is-blacked')
-
-        Roller.Stop(); // Stop the slider
-
-    }, 125);
-    isIntervalSet = true;
-}).mousestop(function() {
-    isIntervalSet = false;
-    window.clearTimeout(timer);
-    timer = null;
-
-    $('body').removeClass('is-blacked');
-
-    Roller.Start(1); // Start the roller
 
 });
 
-timer = window.setInterval(function() {
-    enableHandler = true;
-}, 10);
+// Follower
+var mouseX = 0,
+    mouseY = 0;
 
-$(document).ready(function() {
-    $('.popup-link').magnificPopup({
-      // Delay in milliseconds before popup is removed
-      removalDelay: 300,
-      mainClass: 'mfp-fade'
-    });
+$(document).mousemove(function(e){
+   mouseX = e.pageX;
+   mouseY = e.pageY; 
 });
+
+var follower = $("#follower");
+var xp = 40, yp = 40;
+var loop = setInterval(function(){
+    // change 12 to alter damping higher is slower
+    xp += (mouseX - xp) / 12 -1;
+    yp += (mouseY - yp) / 12 -1;
+    follower.css({left:xp, top:yp});
+
+}, 15); 
+
+// var timer = null;
+// var isIntervalSet = false;
+
+// $('body').mousemove(function() {
+//     if (isIntervalSet) {
+//         return;
+//     }
+//     timer = window.setInterval(function() {
+
+//         $('body').addClass('is-blacked')
+
+//         Roller.Stop(); // Stop the slider
+
+//     }, 125);
+//     isIntervalSet = true;
+// }).mousestop(function() {
+//     isIntervalSet = false;
+//     window.clearTimeout(timer);
+//     timer = null;
+
+//     $('body').removeClass('is-blacked');
+
+//     Roller.Start(1); // Start the roller
+
+// });
+
+// timer = window.setInterval(function() {
+//     enableHandler = true;
+// }, 10);
+
+// // Magnific popup
+// $(document).ready(function() {
+//     $('.popup-link').magnificPopup({
+//       // Delay in milliseconds before popup is removed
+//       removalDelay: 300,
+//       mainClass: 'mfp-fade'
+//     });
+// });
