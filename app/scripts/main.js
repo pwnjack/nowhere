@@ -23,7 +23,7 @@ var Roller= {
 
 
                         }, 125);
-        }, 500); // Time between rolling elements (min 250ms)
+        }, 250); // Time between rolling elements (min 250ms)
     },
     Stop: function() {
         window.clearTimeout(this.roller);
@@ -64,13 +64,9 @@ timer = window.setInterval(function() {
 }, 10);
 
 $(document).ready(function() {
-    // Initialize popup as usual
     $('.popup-link').magnificPopup({
       // Delay in milliseconds before popup is removed
       removalDelay: 300,
-
-      // Class that is added to popup wrapper and background
-      // make it unique to apply your CSS animations just to this exact popup
       mainClass: 'mfp-fade'
     });
 });
