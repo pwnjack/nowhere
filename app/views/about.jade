@@ -1,0 +1,111 @@
+extends master
+
+block title
+	title LSWHR - About
+
+block content
+
+	//- include partials/header
+
+	//- include partials/menu
+	a.btn.btn-default.btn-menu.btn-about(href="/")
+		i.fa.fa-info
+
+	script.
+		var d = document.getElementById("body");d.className += " is-blacked";
+
+	.container.about-container
+		.about-page
+
+			h1 Nowhere Festival 2016
+
+			table.table
+				thead
+					tr
+						th
+						th Friday 1—Preview
+				tbody
+					tr
+						td 22.30
+						td LINO CAPRA VACCINA Live
+					tr
+						td 00.30
+						td WILLIAM BASINSKI Live
+					tr
+						td 01.30
+						td HIEROGLYPHIC BEING Live
+					tr
+						td 03.30
+						td Meze Dj Set
+
+			table.table
+				thead
+					tr
+						th
+						th Friday 29—Day 1
+				tbody
+					tr
+						td 00.00
+						td PETIT SINGE Live
+					tr
+						td 01.00
+						td BABYFATHER (Dean Blunt) Live
+					tr
+						td 02.00
+						td HOT SHOTZ (Powell + Lorenzo Senni) Live
+					tr
+						td 04.00
+						td UNIT MOEBIUS Live
+					tr
+						td 23.30
+						td Key Clef Live
+					tr
+						td 00.30
+						td Morozov Dj Set
+					tr
+						td 02.30
+						td Luciano Lamanna + Fire at Work Live	
+
+			table.table
+				thead
+					tr
+						th
+						th Saturday 30—Day 2
+				tbody
+					tr
+						td 00.00
+						td CATERINA BARBIERI Live
+					tr
+						td 01.00
+						td DOPPLEREFFEKT Live
+					tr
+						td 02.00
+						td ALVA NOTO Live
+					tr
+						td 04.00
+						td FLORIAN KUPFER Dj Set
+					tr
+						td 23.30
+						td Oren Ambarchi Live
+					tr
+						td 00.30
+						td Beatrice Dollon Dj Set
+					tr
+						td 02.30
+						td Vaghe Stelle Live
+
+			p Ex Dogana
+				br
+				| Via dello Scalo di San Lorenzo 10
+				br
+				| Roma
+				br
+				br
+				| Ticket	1 day 	15,00€
+				br
+				| Ticket 	3 days   40,00€
+				br
+				br
+				| Organized by #[a(href="http://www.facebook.com/lswhr.elsewhere") LSWHR]
+				br
+				a(href="mailto:info@nowherefestival.it") info@nowherefestival.it

@@ -6,9 +6,7 @@ window.fitText( document.getElementsByClassName("fittext") );
 $('.quotes').css('display', 'none');
 
 // Add custom cursor
-
-// Set stop cursor
-$('body').removeClass('cursor-play').addClass('cursor-stop');
+$('body').addClass('cursor-stop');
 
 // Text roller
 var Roller= {
