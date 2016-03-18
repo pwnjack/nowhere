@@ -53,21 +53,21 @@
 	color: #aaa;
 }
 
-.btn-default {
-	border-radius: 50%;
-	border-width: 3px;
-	border-color: $black;
-	position: absolute;
-	left: 15px;
-	top: 15px;
-	z-index: 10;
-	color: $black;
-	&:hover, &:active, &:focus {
-		border-color: $black !important;
-		background: #000 !important;
-		color: #fff !important;
-	}
-}
+// .btn-default {
+// 	border-radius: 50%;
+// 	border-width: 3px;
+// 	border-color: $black;
+// 	position: absolute;
+// 	left: 15px;
+// 	top: 15px;
+// 	z-index: 10;
+// 	color: $black;
+// 	&:hover, &:active, &:focus {
+// 		border-color: $black !important;
+// 		background: #000 !important;
+// 		color: #fff !important;
+// 	}
+// }
 
 .btn-about {
 	color: #fff;
@@ -104,7 +104,7 @@
 	margin-bottom: 5px;
 	h1 {
 		font-size: 2.2em;
-		text-indent: 10%;
+		text-indent: 112px;
 		margin-left: 8px;
 	}
 	table {
@@ -114,6 +114,7 @@
 		tr th {
 			font-weight: normal;
 			border: 0;
+			text-indent: 6px;
 		}
 		tr {border: 0;}
 		tr > td {
@@ -127,7 +128,7 @@
 	}
 	p {
 		font-size: 2.2em;
-		margin-left: 25px;
+		margin-left: 16px;
 	}
 	a {
 		color: #fff;
@@ -137,6 +138,38 @@
 	}
 }
 
+.svg-home {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+.svg-home:hover {
+	// background: $black;
+	border-radius: 50%;
+}
+.svg-home:hover path {
+    // fill: #fff;
+}
+
+.svg-about {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+.svg-about path {
+	fill: #fff;
+}
+.svg-about:hover {
+	// background: #fff;
+	border-radius: 50%;
+}
+.svg-about:hover path {
+    // fill: #000;
+}
 
 // .dropdown-menu {
 // 	border-radius: 0;
