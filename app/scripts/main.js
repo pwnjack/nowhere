@@ -20,7 +20,7 @@ var Roller= {
                     setTimeout(
                         function() {
                             current_element.toggleClass('is-active');
-                        }, 125);
+                        }, 75);
 
                     setTimeout(
                         function() {
@@ -32,8 +32,8 @@ var Roller= {
                             }
 
 
-                        }, 125);
-        }, 500); // Time between rolling elements (min 250ms)
+                        }, 75);
+        }, 150); // Time between rolling elements (min double toggle timeout)
     },
     Stop: function() {
         window.clearTimeout(this.roller);
