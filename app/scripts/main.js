@@ -32,11 +32,16 @@ jQuery('img.svg').each(function(){
 // fitText(document.getElementById('fittext'), 1.2)
 window.fitText( document.getElementsByClassName("fittext") );
 
+// on windows resize, brutally reload page, because fuck it!
+window.onresize = function(event) {
+    window.location.reload(false); 
+};
+
 // Hide quotes
 $('.quotes').css('display', 'none');
 
 // Add custom cursor
-$('body').addClass('cursor-stop');
+// $('body').addClass('cursor-stop');
 
 // Text roller
 var Roller= {
@@ -81,7 +86,8 @@ $('body').on('click', function() {
     // Lights off
     $(this).toggleClass('is-blacked');
     // Set play cursor
-    $('body').removeClass('cursor-stop').addClass('cursor-play');
+    // $('body').removeClass('cursor-stop').addClass('cursor-play');
+    $('#follower h3').text('CLICK TO PLAY');
     // Stop roller
     Roller.Stop();
 
@@ -89,7 +95,8 @@ $('body').on('click', function() {
         // Start roller
         Roller.Start(1);
         // Set stop cursor
-        $('body').removeClass('cursor-play').addClass('cursor-stop');
+        // $('body').removeClass('cursor-play').addClass('cursor-stop');
+        $('#follower h3').text('CLICK TO STOP');
         // Change svg color
         $('.svg-home path').css('fill', 'black');
         $('.svg-home:hover path').css('fill', 'white');
@@ -99,23 +106,23 @@ $('body').on('click', function() {
 });
 
 // Follower
-// var mouseX = 0,
-//     mouseY = 0;
+var mouseX = 0,
+    mouseY = 0;
 
-// $(document).mousemove(function(e){
-//    mouseX = e.pageX;
-//    mouseY = e.pageY; 
-// });
+$(document).mousemove(function(e){
+   mouseX = e.pageX;
+   mouseY = e.pageY; 
+});
 
-// var follower = $("#follower");
-// var xp = 40, yp = 40;
-// var loop = setInterval(function(){
-//     // change 12 to alter damping higher is slower
-//     xp += (mouseX - xp) / 12 -1;
-//     yp += (mouseY - yp) / 12 -1;
-//     follower.css({left:xp, top:yp});
+var follower = $("#follower");
+var xp = 40, yp = 40;
+var loop = setInterval(function(){
+    // change 12 to alter damping higher is slower
+    xp += (mouseX - xp) / 12 -1;
+    yp += (mouseY - yp) / 12 -1;
+    follower.css({left:xp, top:yp});
 
-// }, 15); 
+}, 0); 
 
 
 // Mouse move event (with delay)

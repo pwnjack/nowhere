@@ -5,7 +5,34 @@
 // Extra small devices (767px)
 @media (max-width: $screen-xs-max) {
 
-	
+	.svg-home {
+		top: 15px;
+		left: 50%;
+		margin-left: -35px;
+	}
+
+	.svg-about {
+		top: 15px;
+		left: 50%;
+		margin-left: -35px;
+	}
+
+	.about-container {
+		padding-top: 120px;
+		padding-left: 50px;
+	}
+
+	.huge-text {
+		transform: scale(1);
+	}
+
+	table, p, .about-container h1 {
+		font-size: 1.4em !important;
+	}
+
+	.about-container h1 {
+		text-indent: 0;
+	}
 
 }
 
@@ -26,6 +53,8 @@
 // Large devices (from 1200px and up)
 @media (min-width: $screen-lg-min) {
 
-	
+	.about-container {
+		margin-left: 15%;
+	}
 
 }

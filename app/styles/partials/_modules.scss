@@ -11,19 +11,22 @@
 	}
 }
 
-.cursor-stop {
-	cursor: url('../images/stop-cursor.png'), pointer;
-}
+// .cursor-stop {
+// 	cursor: url('../images/stop-cursor.png'), pointer;
+// 	cursor: pointer;
+// }
 
-.cursor-play {
-	cursor: url('../images/play-cursor.png'), pointer;
-}
+// .cursor-play {
+// 	cursor: url('../images/play-cursor.png'), pointer;
+// 	cursor: pointer;
+// }
 
 .huge-text-container {
 	padding: 60px 25px;
 	position: relative;
 	z-index: -1;
 	font-size: 62.5%;
+	transform-style: preserve-3d;
 }
 
 .huge-text {
@@ -32,6 +35,13 @@
 	margin: 0;
 	padding: 0;
 	line-height: 90%;
+	transform: scale(1.04);
+}
+
+.v-center {
+	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
 }
 
 .quotes {
@@ -69,15 +79,21 @@
 // 	}
 // }
 
+// .btn-about {
+// 	color: #fff;
+// 	background: $black;
+// 	border-color: #fff;
+// 	&:hover, &:active, &:focus {
+// 		border-color: #fff !important;
+// 		background: #fff !important;
+// 		color: $black !important;
+// 	}
+// }
+
 .btn-about {
-	color: #fff;
-	background: $black;
-	border-color: #fff;
-	&:hover, &:active, &:focus {
-		border-color: #fff !important;
-		background: #fff !important;
-		color: $black !important;
-	}
+	// display: block;
+	// height: 70px;
+	// width: 70px;
 }
 
 // .btn-menu {
@@ -120,6 +136,7 @@
 		tr > td {
 			border: 0;
 			padding: 0 15px;
+			line-height: 1.22em;
 		}
 		tr > td:first-child {
 			text-align: right;
@@ -128,6 +145,7 @@
 	}
 	p {
 		font-size: 2.2em;
+		line-height: 1.22em;
 		margin-left: 16px;
 	}
 	a {
@@ -139,33 +157,39 @@
 }
 
 .svg-home {
-	width: 50px;
-	height: 50px;
+	width: 70px;
+	height: 70px;
 	position: absolute;
 	left: 15px;
 	top: 15px;
+	z-index: 1000;
+	background: #fff;
+	border-radius: 50%;
 }
 .svg-home:hover {
 	// background: $black;
-	border-radius: 50%;
+	// border-radius: 50%;
 }
 .svg-home:hover path {
     // fill: #fff;
 }
 
 .svg-about {
-	width: 50px;
-	height: 50px;
+	width: 70px;
+	height: 70px;
 	position: absolute;
 	left: 15px;
 	top: 15px;
+	z-index: 1000;
+	background: $black;
+	border-radius: 50%;
 }
 .svg-about path {
 	fill: #fff;
 }
 .svg-about:hover {
 	// background: #fff;
-	border-radius: 50%;
+	// border-radius: 50%;
 }
 .svg-about:hover path {
     // fill: #000;
@@ -198,11 +222,18 @@
 // }
 
 // follower
-// body {
-// 	cursor: none;
-// }
-// #follower {
-// 	position: absolute;
-// 	color: $black;
-// 	h3 {font-weight: 700;}
-// }
+body {
+	// cursor: none;
+}
+#follower {
+	position: absolute;
+	z-index: 999;
+	color: $black;
+	min-width: 220px;
+	h3 {
+		font-weight: 700;
+		border: 3px solid $black;
+		padding: 10px 15px;
+		background: #fff;
+	}
+}
