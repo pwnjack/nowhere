@@ -131,12 +131,14 @@
 			font-weight: normal;
 			border: 0;
 			text-indent: 6px;
+			line-height: 1.3em;
+			padding: 0 10px;
 		}
 		tr {border: 0;}
 		tr > td {
 			border: 0;
 			padding: 0 15px;
-			line-height: 1.22em;
+			line-height: 1.3em;
 		}
 		tr > td:first-child {
 			text-align: right;
@@ -145,7 +147,7 @@
 	}
 	p {
 		font-size: 2.2em;
-		line-height: 1.22em;
+		line-height: 1.3em;
 		margin-left: 16px;
 	}
 	a {
@@ -223,7 +225,10 @@
 
 // follower
 body {
-	// cursor: none;
+	cursor: none;
+}
+body.is-blacked {
+	cursor: default;
 }
 #follower {
 	position: absolute;
