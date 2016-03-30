@@ -21,4 +21,4 @@
     }
 }());
 
-console.log('Crusader is ready to purge the evil.');
+// console.log('Crusader is ready to purge the evil.');

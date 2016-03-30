@@ -30,9 +30,17 @@ jQuery('img.svg').each(function(){
 
 // FitText
 // fitText(document.getElementById('fittext'), 1.2)
-window.fitText( document.getElementsByClassName("fittext") );
+if ($('body').hasClass('is-home')) {
+    // console.log('this is home');
+    window.fitText( document.getElementsByClassName("fittext") );
+}
 
-// on windows resize, brutally reload page, because fuck it!
+if ($('body').hasClass('is-about')) {
+    // console.log('this is about');
+    $('body').css('overflow', 'visible');
+}
+
+// On windows resize, brutally reload page, because fuck it!
 window.onresize = function(event) {
     window.location.reload(false); 
 };
@@ -78,32 +86,34 @@ var Roller= {
 Roller.Start(1); // Start the roller
 // Roller.Stop(); // Stop the roller
 
-$('body').on('click', function() {
-    // Change svg color
-    $('.svg-home path').css('fill', 'white');
-    $('.svg-home:hover path').css('fill', 'white');
-    // $('.svg-home:hover').css('background', 'black');
-    // Lights off
-    $(this).toggleClass('is-blacked');
-    // Set play cursor
-    // $('body').removeClass('cursor-stop').addClass('cursor-play');
-    $('#follower h3').text('CLICK TO PLAY');
-    // Stop roller
-    Roller.Stop();
-
-    if (!$('body').hasClass('is-blacked')) {
-        // Start roller
-        Roller.Start(1);
-        // Set stop cursor
-        // $('body').removeClass('cursor-play').addClass('cursor-stop');
-        $('#follower h3').text('CLICK TO STOP');
+if ($('body').hasClass('is-home')) {
+    $('body').on('click', function() {
         // Change svg color
-        $('.svg-home path').css('fill', 'black');
+        $('.svg-home path').css('fill', 'white');
         $('.svg-home:hover path').css('fill', 'white');
-        // $('.svg-home:hover').css('background', 'white');
-    }
+        // $('.svg-home:hover').css('background', 'black');
+        // Lights off
+        $(this).toggleClass('is-blacked');
+        // Set play cursor
+        // $('body').removeClass('cursor-stop').addClass('cursor-play');
+        $('#follower h3').text('CLICK TO PLAY');
+        // Stop roller
+        Roller.Stop();
 
-});
+        if (!$('body').hasClass('is-blacked')) {
+            // Start roller
+            Roller.Start(1);
+            // Set stop cursor
+            // $('body').removeClass('cursor-play').addClass('cursor-stop');
+            $('#follower h3').text('CLICK TO STOP');
+            // Change svg color
+            $('.svg-home path').css('fill', 'black');
+            $('.svg-home:hover path').css('fill', 'white');
+            // $('.svg-home:hover').css('background', 'white');
+        }
+
+    });
+}
 
 // Follower
 var mouseX = 0,

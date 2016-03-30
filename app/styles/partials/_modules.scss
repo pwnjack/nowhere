@@ -11,6 +11,14 @@
 	}
 }
 
+// Make it even more huge 
+.container-fluid {
+	transform: scale(1.1);
+}
+body {
+	overflow: hidden; // fix scrolling bars due to scaling
+}
+
 // .cursor-stop {
 // 	cursor: url('../images/stop-cursor.png'), pointer;
 // 	cursor: pointer;
@@ -35,7 +43,6 @@
 	margin: 0;
 	padding: 0;
 	line-height: 90%;
-	transform: scale(1.04);
 }
 
 .v-center {
@@ -227,18 +234,24 @@
 body {
 	cursor: none;
 }
-body.is-blacked {
+.cursor-reset {
 	cursor: default;
 }
 #follower {
 	position: absolute;
 	z-index: 999;
 	color: $black;
-	min-width: 220px;
 	h3 {
+		min-width: 226px;
+		text-align: center;
 		font-weight: 700;
 		border: 3px solid $black;
 		padding: 10px 15px;
 		background: #fff;
 	}
 }
+
+/* webkit, opera, IE9 */
+::selection { background:transparent; }
+/* mozilla firefox */
+::-moz-selection { background:transparent; }
