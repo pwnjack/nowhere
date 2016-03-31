@@ -6,6 +6,8 @@
 
 .home-container {
 	height: 100%;
+	position: relative;
+	z-index: -10;
 	.huge-text-container {
 		height: 100%;
 	}
