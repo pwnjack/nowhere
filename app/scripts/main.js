@@ -97,11 +97,12 @@ Roller.Start(1); // Start the roller
 
 if ($('body').hasClass('is-home')) {
     $('body').on('click', function() {
+        console.log('body clicked!');
         // Change svg color
         $('.svg-home path').css('fill', 'white');
         $('.svg-home:hover path').css('fill', 'white');
         // Lights off
-        $(this).toggleClass('is-blacked');
+        $('body').toggleClass('is-blacked');
         // Set play cursor
         $('body').removeClass('cursor-stop').addClass('cursor-play');
         // Stop roller
