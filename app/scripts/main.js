@@ -9,6 +9,8 @@ if (!isMobile) {
     window.onresize = function(event) {
         window.location.reload(false); 
     }
+    // Safari click fix
+    $('.home-container').css('z-index', '-10');
 }
 
 // Replace all SVG images with inline SVG
@@ -97,7 +99,7 @@ Roller.Start(1); // Start the roller
 
 if ($('body').hasClass('is-home')) {
     $('body').on('click', function() {
-        console.log('body clicked!');
+        // console.log('body clicked!');
         // Change svg color
         $('.svg-home path').css('fill', 'white');
         $('.svg-home:hover path').css('fill', 'white');
