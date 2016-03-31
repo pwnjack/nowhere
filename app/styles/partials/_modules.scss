@@ -19,15 +19,15 @@ body {
 	overflow: hidden; // fix scrolling bars due to scaling
 }
 
-// .cursor-stop {
-// 	cursor: url('../images/stop-cursor.png'), pointer;
-// 	cursor: pointer;
-// }
+.cursor-stop {
+	cursor: url('../images/stop-cursor.png'), pointer;
+	// cursor: pointer;
+}
 
-// .cursor-play {
-// 	cursor: url('../images/play-cursor.png'), pointer;
-// 	cursor: pointer;
-// }
+.cursor-play {
+	cursor: url('../images/play-cursor.png'), pointer;
+	// cursor: pointer;
+}
 
 .huge-text-container {
 	padding: 60px 25px;
@@ -231,25 +231,25 @@ body {
 // }
 
 // follower
-body {
-	cursor: none;
-}
-.cursor-reset {
-	cursor: default;
-}
-#follower {
-	position: absolute;
-	z-index: 999;
-	color: $black;
-	h3 {
-		min-width: 226px;
-		text-align: center;
-		font-weight: 700;
-		border: 3px solid $black;
-		padding: 10px 15px;
-		background: #fff;
-	}
-}
+// body {
+// 	cursor: none;
+// }
+// .cursor-reset {
+// 	cursor: default;
+// }
+// #follower {
+// 	position: absolute;
+// 	z-index: 999;
+// 	color: $black;
+// 	h3 {
+// 		min-width: 226px;
+// 		text-align: center;
+// 		font-weight: 700;
+// 		border: 3px solid $black;
+// 		padding: 10px 15px;
+// 		background: #fff;
+// 	}
+// }
 
 /* webkit, opera, IE9 */
 ::selection { background:transparent; }

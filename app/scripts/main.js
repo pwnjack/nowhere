@@ -49,7 +49,9 @@ window.onresize = function(event) {
 $('.quotes').css('display', 'none');
 
 // Add custom cursor
-// $('body').addClass('cursor-stop');
+if ($('body').hasClass('is-home')) {
+    $('body').addClass('cursor-stop');
+}
 
 // Text roller
 var Roller= {
@@ -95,8 +97,8 @@ if ($('body').hasClass('is-home')) {
         // Lights off
         $(this).toggleClass('is-blacked');
         // Set play cursor
-        // $('body').removeClass('cursor-stop').addClass('cursor-play');
-        $('#follower h3').text('CLICK TO PLAY');
+        $('body').removeClass('cursor-stop').addClass('cursor-play');
+        // $('#follower h3').text('CLICK TO PLAY');
         // Stop roller
         Roller.Stop();
 
@@ -104,8 +106,8 @@ if ($('body').hasClass('is-home')) {
             // Start roller
             Roller.Start(1);
             // Set stop cursor
-            // $('body').removeClass('cursor-play').addClass('cursor-stop');
-            $('#follower h3').text('CLICK TO STOP');
+            $('body').removeClass('cursor-play').addClass('cursor-stop');
+            // $('#follower h3').text('CLICK TO STOP');
             // Change svg color
             $('.svg-home path').css('fill', 'black');
             $('.svg-home:hover path').css('fill', 'white');
