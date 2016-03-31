@@ -29,7 +29,6 @@ jQuery('img.svg').each(function(){
 });
 
 // FitText
-// fitText(document.getElementById('fittext'), 1.2)
 if ($('body').hasClass('is-home')) {
     // console.log('this is home');
     window.fitText( document.getElementsByClassName("fittext") );
@@ -93,12 +92,10 @@ if ($('body').hasClass('is-home')) {
         // Change svg color
         $('.svg-home path').css('fill', 'white');
         $('.svg-home:hover path').css('fill', 'white');
-        // $('.svg-home:hover').css('background', 'black');
         // Lights off
         $(this).toggleClass('is-blacked');
         // Set play cursor
         $('body').removeClass('cursor-stop').addClass('cursor-play');
-        // $('#follower h3').text('CLICK TO PLAY');
         // Stop roller
         Roller.Stop();
 
@@ -107,72 +104,10 @@ if ($('body').hasClass('is-home')) {
             Roller.Start(1);
             // Set stop cursor
             $('body').removeClass('cursor-play').addClass('cursor-stop');
-            // $('#follower h3').text('CLICK TO STOP');
             // Change svg color
             $('.svg-home path').css('fill', 'black');
             $('.svg-home:hover path').css('fill', 'white');
-            // $('.svg-home:hover').css('background', 'white');
         }
 
     });
 }
-
-// Follower
-var mouseX = 0,
-    mouseY = 0;
-
-$(document).mousemove(function(e){
-   mouseX = e.pageX;
-   mouseY = e.pageY; 
-});
-
-var follower = $("#follower");
-var xp = 40, yp = 40;
-var loop = setInterval(function(){
-    // change 12 to alter damping higher is slower
-    xp += (mouseX - xp) / 12 -1;
-    yp += (mouseY - yp) / 12 -1;
-    follower.css({left:xp, top:yp});
-
-}, 0); 
-
-
-// Mouse move event (with delay)
-// var timer = null;
-// var isIntervalSet = false;
-
-// $('body').mousemove(function() {
-//     if (isIntervalSet) {
-//         return;
-//     }
-//     timer = window.setInterval(function() {
-
-//         $('body').addClass('is-blacked')
-
-//         Roller.Stop(); // Stop the slider
-
-//     }, 125);
-//     isIntervalSet = true;
-// }).mousestop(function() {
-//     isIntervalSet = false;
-//     window.clearTimeout(timer);
-//     timer = null;
-
-//     $('body').removeClass('is-blacked');
-
-//     Roller.Start(1); // Start the roller
-
-// });
-
-// timer = window.setInterval(function() {
-//     enableHandler = true;
-// }, 10);
-
-// // Magnific popup
-// $(document).ready(function() {
-//     $('.popup-link').magnificPopup({
-//       // Delay in milliseconds before popup is removed
-//       removalDelay: 300,
-//       mainClass: 'mfp-fade'
-//     });
-// });
