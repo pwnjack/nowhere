@@ -22,11 +22,11 @@ body {
 }
 
 .cursor-stop {
-	cursor: url('../images/stop-cursor.png'), url('http://nowherefestival.it/images/stop-cursor.png'), pointer;
+	cursor: url('http://nowherefestival.it/images/stop-cursor.png'), url('../images/stop-cursor.png'), pointer;
 }
 
 .cursor-play {
-	cursor: url('../images/play-cursor.png'), url('http://nowherefestival.it/images/play-cursor.png'), pointer;
+	cursor: url('http://nowherefestival.it/images/play-cursor.png'), url('../images/play-cursor.png'), pointer;
 }
 
 .huge-text-container {
