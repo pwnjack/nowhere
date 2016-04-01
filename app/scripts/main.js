@@ -5,9 +5,12 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
 // If is not mobile
 if (!isMobile) {
-    // On windows resize, brutally reload page, because fuck it!
-    window.onresize = function(event) {
-        window.location.reload(false); 
+    // if home page
+    if ($('body').hasClass('is-home')) {
+        // On windows resize, brutally reload page, because fuck it!
+        window.onresize = function(event) {
+            window.location.reload(false); 
+        }
     }
     // Safari click fix
     $('.home-container').css('z-index', '-10');
