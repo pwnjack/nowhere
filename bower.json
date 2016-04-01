@@ -20,10 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "font-awesome": "~4.4.0",
     "bootstrap": "~3.3.5",
-    "holderjs": "~2.9.3",
-    "magnific-popup": "^1.1.0",
     "fittext": "*"
   },
   "overrides": {

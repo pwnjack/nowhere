@@ -34,19 +34,35 @@
 		text-indent: 0;
 	}
 
+	.svg-about {
+		position: absolute;
+	}
+
+	.about-container p {
+		margin-left: 95px;
+	}
+
+	.about-container h1 {
+		margin-left: 15px;
+	}
+
 }
 
 // Small devices (from 768px to 991px)
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
 
-	
+	.svg-about {
+		position: absolute;
+	}
 
 }
 
 // Medium devices (from 992px to 1199px)
 @media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
 
-	
+	.about-container {
+		margin-left: 10%;
+	}
 
 }
 
