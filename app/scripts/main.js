@@ -9,11 +9,45 @@ if (!isMobile) {
     if ($('body').hasClass('is-home')) {
         // On windows resize, brutally reload page, because fuck it!
         window.onresize = function(event) {
-            window.location.reload(false); 
+            window.location.reload(false);
         }
     }
     // Safari click fix
     $('.home-container').css('z-index', '-10');
+}
+
+// If is mobile
+if (isMobile) {
+
+    // Find matches
+    var mql = window.matchMedia("(orientation: portrait)");
+
+    // If there are matches, we're in portrait
+    if(mql.matches) {  
+        // Portrait orientation
+    } else {  
+        // Landscape orientation
+        $('.home-container').css({
+            'transform': 'scale(0.8)',
+            'margin-top': '15px',
+            // 'position': 'fixed',
+            // 'overflow': 'hidden',
+        });
+        // $('.svg-home').css('position', 'fixed');
+    }
+
+    // Add a media query change listener
+    mql.addListener(function(m) {
+        if(m.matches) {
+            // Changed to portrait
+            window.location.reload(false);
+        }
+        else {
+            // Changed to landscape
+            window.location.reload(false);
+        }
+    });
+
 }
 
 // Replace all SVG images with inline SVG

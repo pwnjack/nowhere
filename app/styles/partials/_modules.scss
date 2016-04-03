@@ -12,10 +12,10 @@
 	}
 }
 
-// Make it even more huge 
 .container-fluid {
-	transform: scale(1.1);
+	transform: scale(1.1); // Make it even more huge 
 }
+
 body {
 	overflow: hidden; // fix scrolling bars due to scaling
 }
@@ -104,7 +104,7 @@ body {
 .svg-home {
 	width: 70px;
 	height: 70px;
-	position: absolute;
+	position: fixed;
 	left: 15px;
 	top: 15px;
 	z-index: 1000;
@@ -130,3 +130,17 @@ body {
 ::selection { background:transparent; }
 /* mozilla firefox */
 ::-moz-selection { background:transparent; }
+
+/* landscape */
+@media screen and (orientation:landscape) {
+	
+	.home-container {
+		// transform: scale(0.8);
+		// margin-top: 15px;
+	}
+
+	.svg-home {
+		// margin-top: 1%;
+	}
+
+}
