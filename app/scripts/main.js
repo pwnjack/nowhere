@@ -159,3 +159,14 @@ if ($('body').hasClass('is-home')) {
 
     });
 }
+
+// When tab is inactive stop the roller 
+window.onfocus = function () {
+  // isActive = true;
+  Roller.Start(1); 
+};
+window.onblur = function () {
+  // isActive = false;
+  Roller.Stop(); 
+};
+
